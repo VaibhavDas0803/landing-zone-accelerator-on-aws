@@ -85,6 +85,7 @@ export class ControlTowerLandingZone implements AcceleratorModule {
       logger.warn(
         `AWS Control Tower Landing Zone operation with identifier ${operationIdentifier} in ${response.operationDetails?.status} state !!!!. Please investigate CT operation before executing pipeline`,
       );
+      logger.warn(`${response.operationDetails}`)
       throw new Error(
         `AWS Control Tower Landing Zone operation with identifier ${operationIdentifier} in ${response.operationDetails?.status} state !!!!. Please investigate CT operation before executing pipeline`,
       );
